@@ -1,0 +1,171 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.3rem;
+  color: hsl(217, 19%, 35%);
+  background-color: hsl(210, 46%, 95%);
+  line-height: 1;
+  font-weight: 400;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+  max-width: 100rem;
+  margin: 20rem auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 4rem;
+  background-color: #fff;
+  border-radius: 0 2rem 2rem 0;
+  padding: 4rem;
+}
+
+.drawers-img {
+  width: 100%;
+  height: 100%;
+  object-fit: none;
+  border-radius: 2rem 0 0 2rem;
+}
+
+.main-heading {
+  line-height: 3.2rem;
+}
+
+.subheading {
+  color: hsl(214, 17%, 51%);
+  line-height: 2rem;
+  font-size: 1.5rem;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.img-date-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.profile-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-self: center;
+}
+
+.profile-img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.profile-date {
+  color: hsl(212, 23%, 69%);
+}
+
+/* share button */
+.share-btn {
+  position: relative;
+  cursor: pointer;
+  border: none;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: hsl(210, 46%, 95%);
+}
+
+.share-btn:hover,
+.share-btn:active {
+  background-color: hsl(214, 17%, 51%);
+}
+
+.share-icon {
+  fill: #6e8098;
+}
+
+/* selecting like this the icon changes color along with the button */
+.share-btn:hover .share-icon {
+  fill: #fff;
+}
+
+/* popup box */
+.popup-box {
+  position: absolute;
+  top: -5rem;
+  left: 0;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  background-color: hsl(217, 19%, 35%);
+  padding: 1.6rem 4rem;
+  border-radius: 1rem;
+  z-index: 10;
+}
+
+.popup-box::after {
+  content: "";
+  position: absolute;
+  padding: 2rem 2rem;
+  bottom: -10%;
+  left: 50%;
+  transform: rotate(45deg);
+  z-index: 1;
+  background-color: hsl(217, 19%, 35%);
+}
+
+.share-text {
+  color: hsl(212, 23%, 69%);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  padding-right: 2rem;
+}
+
+.social-icon-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 2;
+}
+
+.social-icon {
+  fill: #fff;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 24em) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .drawers-img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .profile-container {
+    position: relative;
+  }
+
+  .popup-box::after {
+    display: none;
+  }
+}
